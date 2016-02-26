@@ -1,0 +1,58 @@
+<html>
+<head>
+   <link href= "cssmanip.css"
+            rel= "stylesheet"
+            type= "text/css" />
+			
+	<script>
+		function colors() {
+				var rBorder = document.getElementById("borderR").value;
+				var bBorder = document.getElementById("borderB").value;
+				var gBorder = document.getElementById("borderG").value;
+				var wBorder = document.getElementById("borderW").value;
+				var rBack = document.getElementById("backR").value;
+				var gBack = document.getElementById("backG").value;
+				var bBack = document.getElementById("backB").value;
+
+				if (rBorder == "" || bBorder == "" || gBorder == "" || wBorder == "" || rBack == "" || gBack == "" || bBack == "" )
+				{
+					if (rBorder == "") { rBorder = 0; }
+					if (bBorder == "") { bBorder = 0; }
+					if (gBorder == "") { gBorder = 0; }
+					if (wBorder == "") { wBorder = 0; }
+					if (gBack == "") { gBack = 0; }
+					if (rBack == "") { rBack = 0; }
+					if (bBack == "") { bBack = 0; }
+				}
+
+				document.getElementById("myP").style.borderWidth = wBorder + 'px';
+				document.getElementById("myP").style.borderColor = 'rgb(' + rBorder + ',' + gBorder + ',' + bBorder + ')';
+				document.getElementById("myP").style.backgroundColor = 'rgb(' + rBack + ',' + gBack + ',' + bBack + ')';
+				alert("Your paragraph background colors are " + document.getElementById("myP").style.backgroundColor + ", and border color is " + document.getElementById("myP").style.borderColor + " and border width is " + document.getElementById("myP").style.borderWidth);
+		}
+	</script>
+
+</head>
+<body>
+	<p div id = myP><font color = "#808080">I'm a paragraph that can be given a border, border color, and background color.</p></div></font>
+	If you enter no input it will default to 0. Please give integer values.<br><br>
+
+	<form>
+		<b>Border Color: (0-255)</b><br>
+		Red value: <input id="borderR" type="text"><br>
+		Green value: <input id="borderG" type="text"><br>
+		Blue value: <input id="borderB" type="text"><br>
+		Width (px): <input id="borderW" type="text">
+		
+		<br><br>
+		<b>Background Color: (0-255)</b><br>
+		Red value: <input id="backR" type="text"><br>
+		Green value: <input id="backG" type="text"><br>
+		Blue value: <input id="backB" type="text">
+		
+		<br><br>
+		<input type="button" onclick= "colors()" value="Change Colors">
+	</form>
+
+</body>
+</html>

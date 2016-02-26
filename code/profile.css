@@ -1,0 +1,43 @@
+p
+{
+	border: 3px solid #73AD21;
+    background-color: #ccffff;
+	color: #660066;
+	font-family: Georgia;
+    font-size: 14pt;
+	padding: 10px;
+}
+p.biography
+{
+    background-color: #ccffff;
+	color: #000080;
+	font-family: Georgia;
+    font-size: 15pt
+
+}
+img {
+	float:left;
+	padding: 10px;
+}
+body
+{
+
+	background-image: url(flowers.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-color: #ffffcc;
+}
+a
+{
+	font-family: Arial;
+    font-size: 12pt;
+    color: #1a1a00;
+}
+a:hover
+{
+	font-family: Arial;
+    font-size: 13pt;
+    background-color: #1a1a00;
+    color: #a3c2c2;
+}

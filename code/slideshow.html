@@ -1,0 +1,91 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script> <!-- Is there a more concise way to do this -->
+
+	$(document).ready(function(){
+		$("#previous").click(function(){
+			if ($("#dog1").hasClass("shown")) {
+				$("#dog5").addClass("shown");
+				$("#dog1").removeClass("shown");
+				$("#dog5").show();
+				$("#dog1").hide();
+			}
+			else if ($("#dog2").hasClass("shown")) {
+				$("#dog1").addClass("shown");
+				$("#dog2").removeClass("shown");
+				$("#dog1").show();
+				$("#dog2").hide();
+			}
+			else if ($("#dog3").hasClass("shown")) {
+				$("#dog2").addClass("shown");
+				$("#dog3").removeClass("shown");
+				$("#dog2").show();
+				$("#dog3").hide();
+			}
+			else if ($("#dog4").hasClass("shown")) {
+				$("#dog3").addClass("shown");
+				$("#dog4").removeClass("shown");
+				$("#dog3").show();
+				$("#dog4").hide();
+			}
+			else if ($("#dog5").hasClass("shown")) {
+				$("#dog4").addClass("shown");
+				$("#dog5").removeClass("shown");
+				$("#dog4").show();
+				$("#dog5").hide();
+			}
+		});
+		
+		$("#next").click(function(){
+			if ($("#dog1").hasClass("shown")) {
+				$("#dog2").addClass("shown");
+				$("#dog1").removeClass("shown");
+				$("#dog2").show();
+				$("#dog1").hide();
+			}
+			else if ($("#dog2").hasClass("shown")) {
+				$("#dog3").addClass("shown");
+				$("#dog2").removeClass("shown");
+				$("#dog3").show();
+				$("#dog2").hide();
+			}
+			else if ($("#dog3").hasClass("shown")) {
+				$("#dog4").addClass("shown");
+				$("#dog3").removeClass("shown");
+				$("#dog4").show();
+				$("#dog3").hide();
+			}
+			else if ($("#dog4").hasClass("shown")) {
+				$("#dog5").addClass("shown");
+				$("#dog4").removeClass("shown");
+				$("#dog5").show();
+				$("#dog4").hide();
+			}
+			else if ($("#dog5").hasClass("shown")) {
+				$("#dog1").addClass("shown");
+				$("#dog5").removeClass("shown");
+				$("#dog1").show();
+				$("#dog5").hide();
+			}
+		});
+	});
+	</script>
+</head>
+
+<body>
+	<p>Dog Slideshow</p>
+	<img src="dog.jpg" id = "dog" alt="Dog" width="500" height="200">
+	
+	<br>
+	<img src="dog1.jpg" id = "dog1" alt="Dog" width="500" height="500" class = "shown">
+	<img src="dog2.jpg" id = "dog2" alt="Dog" width="500" height="500" visibility: hidden>
+	<img src="dog3.jpg" id = "dog3" alt="Dog" width="500" height="500" visibility: hidden>
+	<img src="dog4.jpg" id = "dog4" alt="Dog" width="500" height="500" visibility: hidden>
+	<img src="dog5.jpg" id = "dog5" alt="Dog" width="500" height="500" visibility: hidden>
+	
+	<br><br>
+	<button id="previous">Previous</button>
+	<button id="next">Next</button>
+</body>
+</html>
